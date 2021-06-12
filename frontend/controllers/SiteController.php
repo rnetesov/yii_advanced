@@ -263,4 +263,9 @@ class SiteController extends Controller
         $name = $name ?: 'Unknown';
         return $this->render('hello', compact('name'));
     }
+
+    public function actionCatalog()
+    {
+        return $this->render('catalog');
+    }
 }
