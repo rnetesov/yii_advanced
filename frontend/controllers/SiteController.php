@@ -257,4 +257,10 @@ class SiteController extends Controller
             'model' => $model
         ]);
     }
+
+    public function actionHello($name = null)
+    {
+        $name = $name ?: 'Unknown';
+        return $this->render('hello', compact('name'));
+    }
 }

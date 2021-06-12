@@ -99,4 +99,10 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+
+    public function actionHello($name = null)
+    {
+        $name = $name ?: 'Unknown';
+        return $this->render('hello', compact($name));
+    }
 }
