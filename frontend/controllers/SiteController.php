@@ -260,7 +260,7 @@ class SiteController extends Controller
 
     public function actionHello($name = null)
     {
-        $name = $name ?: 'Unknown';
+        $name = (Yii::$app->user->identity) ? Yii::$app->user->identity->username : $name ?: 'Guest';
         return $this->render('hello', compact('name'));
     }
 
